@@ -8,8 +8,8 @@ var ajaxResponseReceived = false;
 var sort = Settings.data('sort');
 if(sort === undefined){
   console.log('Local settings not found. Setting up...');
-  Settings.data('sort', 'top');
-  sort = 'top';
+  Settings.data('sort', 'new');
+  sort = 'new';
 } 
 
 var main = new UI.Card({
@@ -73,8 +73,8 @@ main.on('click', 'select', function(e) {
 
 main.on('click', 'up', function() {
   if(sort == 'new'){
-    sort = 'top';
-    Settings.data('sort', 'top');
+    sort = 'hot';
+    Settings.data('sort', 'hot');
   } else {
     sort = 'new';
     Settings.data('sort', 'new');
